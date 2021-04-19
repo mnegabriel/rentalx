@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import SpecificationsRepository from '../modules/cars/repositories/SpecificationsRepository'
-import CreateSpecificationService from '../modules/cars/services/CreateSpecificationService'
+import CreateSpecificationUseCase from '../modules/cars/useCases/createSpecification/CreateSpecificationUseCase'
 
 const specificationsRoutes = Router()
 
@@ -11,8 +11,8 @@ specificationsRoutes.get('/', (req, res) => res.json(specificationsRepository.li
 specificationsRoutes.post('/', (req, res) => {
     const { name, description } = req.body
 
-    const createSpecificationService = new CreateSpecificationService(specificationsRepository)
-    try { createSpecificationService.execute({ name, description }) }
+    const CreateSpecificationUseCase = new CreateSpecificationUseCase(specificationsRepository)
+    try { CreateSpecificationUseCase.execute({ name, description }) }
     catch (err) { return res.status(409).json({ error: err.message }) }
 
     return res.status(201).send()
