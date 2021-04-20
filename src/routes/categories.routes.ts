@@ -19,7 +19,7 @@ categoriesRoutes.post('/', (req, res) => {
 })
 
 categoriesRoutes.post('/import', upload.single('file'), (req, res) => {
-    importCategoriesController.handle(req, res)
+    return importCategoriesController.handle(req, res)
 })
 
 export default categoriesRoutes
