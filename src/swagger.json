@@ -1,0 +1,70 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "RentalX Documentation",
+        "description": "This is a Rent API",
+        "version": "1.0.0",
+        "contact": {
+            "email": "gabrielmd123@/gmail.com"
+        }
+    },
+    "paths": {
+        "/categories": {
+            "get": {
+                "tags": ["Categories"],
+                "summary": "List all categories",
+                "description": "Get a list with all categories.",
+                "responses": {
+                    "200": {
+                        "description": "Created category with success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": { "type": "string" },
+                                            "description": { "type": "string" }
+                                        },
+                                        "example": {
+                                            "name": "Category",
+                                            "descriptiob": "Category of car"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": ["Categories"],
+                "summary": "Create a category",
+                "description": "Create a new category with a name and a description",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": { "type": "string" },
+                                    "description": { "type": "string" }
+                                },
+                                "example": {
+                                    "name": "Category",
+                                    "descriptiob": "Category of car"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "204": { "description": "Created category with success" },
+                    "500": { "description": "Category already exists" }
+                }
+            }
+        }
+    }
+
+}
