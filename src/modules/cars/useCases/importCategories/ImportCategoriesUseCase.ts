@@ -1,6 +1,6 @@
-import fs from 'fs'
-import csvParse from 'csv-parse'
-import CategoriesRepository from '../../repositories/implementations/CategoriesRepository'
+import fs from "fs"
+import csvParse from "csv-parse"
+import CategoriesRepository from "../../repositories/implementations/CategoriesRepository"
 
 interface IImportCategory {
     name: string;
@@ -22,15 +22,15 @@ class ImportCategoriesUseCase {
             stream.pipe(parseFile)
 
             parseFile
-                .on('data', async (line) => {
+                .on("data", async (line) => {
                     const [name, description] = line
                     categories.push({ name, description })
                 })
-                .on('end', () => {
+                .on("end", () => {
                     fs.promises.unlink(file.path)
                     resolve(categories)
                 })
-                .on('error', (err) => reject(err))
+                .on("error", (err) => reject(err))
 
         })
 

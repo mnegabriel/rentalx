@@ -1,3 +1,0 @@
-docker build -t rentx .
-    inicializar o container do docker 'rentx' na pasta '.' (local)
-
