@@ -1,6 +1,6 @@
 import fs from "fs"
 import csvParse from "csv-parse"
-import CategoriesRepository from "../../repositories/implementations/CategoriesRepository"
+import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository"
 
 interface IImportCategory {
     name: string;
@@ -53,4 +53,4 @@ class ImportCategoriesUseCase {
     }
 }
 
-export default ImportCategoriesUseCase
+export { ImportCategoriesUseCase }

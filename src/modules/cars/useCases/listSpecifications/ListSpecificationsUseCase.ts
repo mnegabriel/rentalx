@@ -10,4 +10,4 @@ class ListSpecificationsUseCase {
     }
 }
 
-export default ListSpecificationsUseCase
+export { ListSpecificationsUseCase }

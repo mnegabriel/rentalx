@@ -12,4 +12,4 @@ specificationsRoutes.post("/", (req, res) => {
     return createSpecificationController.handle(req, res)
 })
 
-export default specificationsRoutes
+export { specificationsRoutes }

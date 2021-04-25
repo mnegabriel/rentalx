@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ListCategoriesUseCase from "./ListCategoriesUseCase";
+import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
 
 class ListCategoriesController {
     constructor(private listCategoriesUseCase: ListCategoriesUseCase) { }
@@ -9,4 +9,4 @@ class ListCategoriesController {
     }
 }
 
-export default ListCategoriesController
+export { ListCategoriesController }

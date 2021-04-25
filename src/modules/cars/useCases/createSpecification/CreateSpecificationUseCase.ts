@@ -17,4 +17,4 @@ class CreateSpecificationUseCase {
     }
 }
 
-export default CreateSpecificationUseCase
+export { CreateSpecificationUseCase }

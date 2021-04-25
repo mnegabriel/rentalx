@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ListSpecificationsUseCase from "./ListSpecificationsUseCase";
+import { ListSpecificationsUseCase } from "./ListSpecificationsUseCase";
 
 class ListSpecificationsController {
     constructor(private listSpecificationsUseCase: ListSpecificationsUseCase) { }
@@ -10,4 +10,4 @@ class ListSpecificationsController {
     }
 }
 
-export default ListSpecificationsController
+export { ListSpecificationsController }
