@@ -1,7 +1,7 @@
-import { v4 as uuidV4 } from 'uuid'
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm'
+import { v4 as uuidV4 } from "uuid"
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm"
 
-@Entity('users')
+@Entity("users")
 class User {
 
     @PrimaryColumn()
@@ -12,6 +12,9 @@ class User {
 
     @Column()
     username: String
+
+    @Column()
+    email: String
 
     @Column()
     password: String
