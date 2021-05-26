@@ -5,22 +5,22 @@ import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm"
 class User {
 
     @PrimaryColumn()
-    id: String
+    id: string
 
     @Column()
-    name: String
+    name: string
 
     // @Column()
-    // username: String
+    // username: string
 
     @Column()
-    email: String
+    email: string
 
     @Column()
-    password: String
+    password: string
 
     @Column()
-    driver_license: String
+    driver_license: string
 
     @Column()
     is_admin: Boolean
