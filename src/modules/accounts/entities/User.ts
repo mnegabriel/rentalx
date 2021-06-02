@@ -10,14 +10,14 @@ class User {
     @Column()
     name: string
 
-    // @Column()
-    // username: string
-
     @Column()
     email: string
 
     @Column()
     password: string
+
+    @Column()
+    avatar: string
 
     @Column()
     driver_license: string
